@@ -15,21 +15,20 @@ Then add to your config:
 
 ```js
 requirejs.config({
-	"gmaps": {
-		"parameters": {
-			"v": "3.exp",
-			"libraries": "visualization,places,drawing,geometry"
-			//, "client": "optional, your client id for google maps for work"
-		},
-	},
+  "gmaps": {
+    "parameters": {
+      "v": "3.exp",
+      "libraries": "visualization,places,drawing,geometry"
+      //, "client": "optional, your client id for google maps for work"
+    },
+  },
 
-	"map": {
-		"*": {
-			"gmaps": "path_to/amd-googlemaps-loader/requirejs-gmaps!https://maps.googleapis.com/maps/api/js",
-			... other mappings you might have...
-		}
-	}
-
+  "map": {
+    "*": {
+      "gmaps": "path_to/amd-googlemaps-loader/requirejs-gmaps!https://maps.googleapis.com/maps/api/js",
+      ... other mappings you might have...
+    }
+  }
 });
 ```
 
@@ -43,25 +42,25 @@ Then add to your config:
 
 ```js
 System.config({
-	paths: {
-    	"github:*": "jspm_packages/github/*",
-    	"npm:*": "jspm_packages/npm/*",
-    	"gmaps": "https://maps.googleapis.com/maps/api/js",	
-    	... other paths ...
+  paths: {
+      "github:*": "jspm_packages/github/*",
+      "npm:*": "jspm_packages/npm/*",
+      "gmaps": "https://maps.googleapis.com/maps/api/js",  
+      ... other paths ...
     },
 
-	meta: {
-    	"gmaps": {
-      		"build": false,
-      			"parameters": {
-        			"v": "3.exp",
-        			"libraries": "visualization,places,drawing,geometry",
-        			//, "client": "optional, your client id for google maps for work"
-      			},
-      		"loader": "amd-googlemaps-loader"
-    	},
-    	... other meta if you have ...
-  	}
+  meta: {
+    "gmaps": {
+      "build": false,
+        "parameters": {
+          "v": "3.exp",
+          "libraries": "visualization,places,drawing,geometry",
+          //, "client": "optional, your client id for google maps for work"
+        },
+        "loader": "amd-googlemaps-loader"
+    },
+    ... other meta if you have ...
+  }
 });
 ```
 
@@ -73,9 +72,9 @@ After installing and adding proper configs to your loader, use it like so:
 
 ```js
 define(['gmaps'],function(gmaps) {
-	var map=new gmaps.Map(...);
+  var map=new gmaps.Map(...);
 
-	var marker = new gmaps.Marker(...);
+  var marker = new gmaps.Marker(...);
 });
 ```
 
