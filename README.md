@@ -25,14 +25,16 @@ requirejs.config({
 
   "map": {
     "*": {
-      "gmaps": "path_to/amd-googlemaps-loader/requirejs-gmaps!https://maps.googleapis.com/maps/api/js",
-      ... other mappings you might have...
+      "gmaps": "path_to/amd-googlemaps-loader/requirejs-gmaps!https://maps.googleapis.com/maps/api/js"
+      //, ...other mappings you have...
     }
   }
 });
 ```
 
 ### JSPM installation and SystemJS config 
+
+If you're using google maps with JSPM and or SystemJS, install it with:
 
 ```
 jspm install npm:amd-googlemaps-loader
@@ -45,8 +47,8 @@ System.config({
   paths: {
       "github:*": "jspm_packages/github/*",
       "npm:*": "jspm_packages/npm/*",
-      "gmaps": "https://maps.googleapis.com/maps/api/js",  
-      ... other paths ...
+      "gmaps": "https://maps.googleapis.com/maps/api/js"
+      //,  ...other paths...
     },
 
   meta: {
@@ -58,8 +60,8 @@ System.config({
           //, "client": "optional, your client id for google maps for work"
         },
         "loader": "amd-googlemaps-loader"
-    },
-    ... other meta if you have ...
+    }
+    //,  ...other meta if you have ...
   }
 });
 ```
