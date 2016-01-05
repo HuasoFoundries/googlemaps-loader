@@ -1,7 +1,4 @@
 var gmapsDecorator = require('./gmaps-decorator');
-var ES6Promise = require('./es6-promise');
-
-ES6Promise.polyfill();
 
 
 function appendScriptTag(src) {
