@@ -3,15 +3,13 @@
  * Este helper devuelve un objeto google funcional, y además extiende varias de sus funcionalidades
  */
 
-
-
-define(['./es6-promise', './gmaps-decorator'], function(ES6Promise, gmapsDecorator) {
+define(['./es6-promise', './gmaps-decorator'], function (ES6Promise, gmapsDecorator) {
 
     ES6Promise.polyfill();
 
     function appendScriptTag(src) {
-        return new Promise(function(resolve, reject) {
-            window.__google_maps_callback__ = function() {
+        return new Promise(function (resolve, reject) {
+            window.__google_maps_callback__ = function () {
                 if (window.google.maps) {
                     var gmaps = window.google.maps;
 
@@ -23,7 +21,7 @@ define(['./es6-promise', './gmaps-decorator'], function(ES6Promise, gmapsDecorat
                 } else {
                     return reject('no gmaps object!');
                 }
-            }
+            };
 
             var script = document.createElement("script");
             script.type = "text/javascript";
@@ -34,11 +32,9 @@ define(['./es6-promise', './gmaps-decorator'], function(ES6Promise, gmapsDecorat
         });
     }
 
-
-
     return {
 
-        load: function(name, parentRequire, onload, opt_config) {
+        load: function (name, parentRequire, onload, opt_config) {
 
             var config = opt_config || {},
                 scriptUrl = parentRequire.toUrl(name).split('?')[0],
@@ -50,7 +46,7 @@ define(['./es6-promise', './gmaps-decorator'], function(ES6Promise, gmapsDecorat
                 return;
             }
 
-            for (key in parameters) {
+            for (var key in parameters) {
                 if (parameters.hasOwnProperty(key)) {
                     paramArray.push(key + '=' + parameters[key]);
                 }
@@ -59,9 +55,9 @@ define(['./es6-promise', './gmaps-decorator'], function(ES6Promise, gmapsDecorat
             scriptUrl += '?' + paramArray.join('&');
 
             return appendScriptTag(scriptUrl)
-                .then(function(gmaps) {
+                .then(function (gmaps) {
                     return onload(gmaps);
-                }).catch(function(e) {
+                }).catch(function (e) {
                     return onload.error(e);
                 });
         }
