@@ -37,7 +37,7 @@ requirejs.config({
 If you're using google maps with JSPM and or SystemJS, install it with:
 
 ```
-jspm install npm:amd-googlemaps-loader
+jspm install gmap=npm:amd-googlemaps-loader
 ```
 
 Then add to your config:
@@ -59,7 +59,7 @@ System.config({
           "libraries": "visualization,places,drawing,geometry",
           //, "client": "optional, your client id for google maps for work"
         },
-        "loader": "amd-googlemaps-loader"
+        "loader": "gmap"
     }
     //,  ...other meta if you have ...
   }

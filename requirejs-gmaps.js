@@ -47,7 +47,7 @@ define(['./es6-promise', './gmaps-decorator'], function (ES6Promise, gmapsDecora
             }
 
             for (var key in parameters) {
-                if (parameters.hasOwnProperty(key)) {
+                if (parameters.hasOwnProperty(key) && parameters[key] !== null) {
                     paramArray.push(key + '=' + parameters[key]);
                 }
             }
