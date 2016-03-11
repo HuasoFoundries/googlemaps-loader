@@ -2,6 +2,14 @@
 
 This little helpers provide a way to load Google Maps API dinamically with AMD, CommonJS and SystemJS.
 
+[![npm](https://img.shields.io/npm/dm/amd-googlemaps-loader.svg?style=plastic)](https://www.npmjs.com/package/amd-googlemaps-loader)
+
+Please note that, starting from version 3.24, [Google Maps API requires for you to get an API Key](https://developers.google.com/maps/documentation/javascript/get-api-key) or a
+client ID (if you have the old Google Maps for Work Plan) and include said parameter on the URL. 
+
+This means that, eventhought `client` and `key` are optional fields for the next examples, you must
+declare one of them or you will get a [NoApiKeys](https://developers.google.com/maps/documentation/javascript/error-messages#deverrorcodes) warning.
+
 
 ### RequireJS installation and config 
 
@@ -20,6 +28,7 @@ requirejs.config({
       "v": "3.exp",
       "libraries": "visualization,places,drawing,geometry"
       //, "client": "optional, your client id for google maps for work"
+      //, "key":"optional, API key"
     },
   },
 
@@ -52,14 +61,15 @@ System.config({
     },
 
   meta: {
-    "gmaps": {
+    "https://maps.googleapis.com/maps/api/*": {
       "build": false,
-        "parameters": {
-          "v": "3.exp",
-          "libraries": "visualization,places,drawing,geometry",
-          //, "client": "optional, your client id for google maps for work"
-        },
-        "loader": "gmap"
+      "parameters": {
+        "v": "3.exp",
+        "libraries": "visualization,places,drawing,geometry",
+        //, "client": "optional, your client id for google maps for work"
+        //, "key":"optional, API key"
+      },
+      "loader": "gmap"
     }
     //,  ...other meta if you have ...
   }
