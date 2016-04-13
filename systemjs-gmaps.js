@@ -1,4 +1,7 @@
 function appendScriptTag(src) {
+    if (typeof window.google === "object" && typeof window.google.maps !== "undefined") {
+        return Promise.resolve(window.google.maps);
+    }
     return new Promise(function (resolve, reject) {
         window.__google_maps_callback__ = function () {
             if (window.google.maps) {
