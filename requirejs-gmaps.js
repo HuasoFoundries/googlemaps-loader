@@ -1,9 +1,8 @@
 /* global globalvars:false*/
 /**
- * Este helper devuelve un objeto google funcional, y además extiende varias de sus funcionalidades
+ * This helper returns a functional google object
  */
-
-define(['./es6-promise', './gmaps-decorator'], function (ES6Promise, gmapsDecorator) {
+define(['./es6-promise'], function (ES6Promise) {
 
     ES6Promise.polyfill();
 
@@ -15,9 +14,6 @@ define(['./es6-promise', './gmaps-decorator'], function (ES6Promise, gmapsDecora
 
                     resolve(gmaps);
                     return gmaps;
-                    // if you want to extend google maps, you can do so here
-                    // gmapsDecorator is just a sample decorator I used to test the loader
-                    // return gmapsDecorator(gmaps);
                 } else {
                     return reject('no gmaps object!');
                 }

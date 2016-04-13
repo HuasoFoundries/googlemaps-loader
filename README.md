@@ -46,8 +46,15 @@ requirejs.config({
 If you're using google maps with JSPM and or SystemJS, install it with:
 
 ```
+jspm install gmap=github:huasofoundries/amd-googlemaps-loader
+```
+
+or
+
+```
 jspm install gmap=npm:amd-googlemaps-loader
 ```
+
 
 Then add to your config:
 
@@ -81,7 +88,6 @@ System.config({
 After installing and adding proper configs to your loader, use it like so:
 
 
-
 ```js
 define(['gmaps'],function(gmaps) {
   var map=new gmaps.Map(...);
@@ -90,3 +96,5 @@ define(['gmaps'],function(gmaps) {
 });
 ```
 
+The global `google` object will still be accesible in the global namespace since that's how
+google exports its library.

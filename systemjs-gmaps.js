@@ -6,10 +6,7 @@ function appendScriptTag(src) {
 
                 resolve(gmaps);
                 return gmaps;
-                // if you want to extend google maps, you can do so here
-                // gmapsDecorator is just a sample decorator I used to test the loader
-                // var gmapsDecorator = require('./gmaps-decorator');
-                // return gmapsDecorator(gmaps);
+
             } else {
                 return reject('no gmaps object!');
             }
