@@ -46,7 +46,7 @@ requirejs.config({
 If you're using google maps with JSPM and or SystemJS, install it with:
 
 ```
-jspm install gmap=github:huasofoundries/amd-googlemaps-loader
+jspm install gmap=github:huasofoundries/googlemaps-loader
 ```
 
 or
