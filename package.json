@@ -1,6 +1,6 @@
 {
   "name": "amd-googlemaps-loader",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "Helpers to dinamically load Google Maps API using RequireJS or JSPM",
   "main": "systemjs-gmaps.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/InstaGIS/googlemaps-loader.git"
+    "url": "git+https://github.com/HuasoFoundries/googlemaps-loader.git"
   },
   "keywords": [
     "google",
@@ -22,7 +22,7 @@
   "author": "amenadiel@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/InstaGIS/googlemaps-loader/issues"
+    "url": "https://github.com/HuasoFoundries/googlemaps-loader/issues"
   },
-  "homepage": "https://github.com/InstaGIS/googlemaps-loader#readme"
+  "homepage": "https://github.com/HuasoFoundries/googlemaps-loader#readme"
 }
