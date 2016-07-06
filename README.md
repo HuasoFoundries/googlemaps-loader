@@ -45,11 +45,6 @@ requirejs.config({
 
 If you're using google maps with JSPM and or SystemJS, install it with:
 
-```
-jspm install gmap=github:huasofoundries/googlemaps-loader
-```
-
-or
 
 ```
 jspm install gmap=npm:amd-googlemaps-loader
@@ -83,18 +78,42 @@ System.config({
 });
 ```
 
+
+
+
+**Note**: *If* npm is unresponsive due to a strange anomaly, you can use the github registry:
+
+```
+jspm install gmap=github:huasofoundries/googlemaps-loader
+```
+
+
 ### Usage
 
 After installing and adding proper configs to your loader, use it like so:
 
-
 ```js
-define(['gmaps'],function(gmaps) {
-  var map=new gmaps.Map(...);
 
-  var marker = new gmaps.Marker(...);
+define([
+  'gmaps',
+  'jquery'
+], function (gmaps, jQuery) {
+
+  jQuery('body').append('<div id="map"/>');
+  
+  var mapOptions = {
+      zoom: 8,
+      center: {
+        lat: -34.397,
+        lng: 150.644
+      }
+    },
+    myMap = new gmaps.Map(document.getElementById('map'), mapOptions);
+
 });
+
 ```
+
 
 The global `google` object will still be accesible in the global namespace since that's how
 google exports its library.
