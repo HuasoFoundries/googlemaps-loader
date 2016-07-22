@@ -1,9 +1,16 @@
+var thePromise = null;
+
 function appendScriptTag(src) {
     if (typeof window.google === "object" && typeof window.google.maps !== "undefined") {
         return Promise.resolve(window.google.maps);
     }
-    return new Promise(function (resolve, reject) {
+
+    if (thePromise !== null) {
+        return thePromise;
+    }
+    thePromise = new Promise(function (resolve, reject) {
         window.__google_maps_callback__ = function () {
+
             if (window.google.maps) {
                 var gmaps = window.google.maps;
 
@@ -14,13 +21,14 @@ function appendScriptTag(src) {
                 return reject('no gmaps object!');
             }
         };
-
-        var script = document.createElement("script");
-        script.type = "text/javascript";
-        script.async = true;
-        script.src = src;
-        return document.body.appendChild(script);
     });
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.async = true;
+    script.src = src;
+    document.body.appendChild(script);
+
+    return thePromise;
 }
 
 

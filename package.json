@@ -1,6 +1,6 @@
 {
   "name": "amd-googlemaps-loader",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "Helpers to dinamically load Google Maps API using RequireJS or JSPM",
   "main": "systemjs-gmaps.js",
   "scripts": {
