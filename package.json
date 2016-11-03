@@ -1,6 +1,6 @@
 {
   "name": "amd-googlemaps-loader",
-  "version": "1.6.4",
+  "version": "1.7.0",
   "description": "Helpers to dinamically load Google Maps API using RequireJS or JSPM",
   "main": "systemjs-gmaps.js",
   "scripts": {
@@ -28,5 +28,12 @@
   "devDependencies": {
     "babel-eslint": "^6.1.0",
     "eslint": "^3.0.1"
+  },
+  "dependencies": {
+    "jspm": "^0.16.47"
+  },
+  "jspm": {
+    "dependencies": {},
+    "devDependencies": {}
   }
 }
