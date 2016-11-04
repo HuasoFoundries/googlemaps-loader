@@ -1,1 +1,6 @@
-{}
+{
+  "npm:jspm-nodelibs-process@0.2.0": {
+    "deps": {},
+    "peerDeps": {}
+  }
+}

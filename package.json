@@ -1,6 +1,6 @@
 {
   "name": "amd-googlemaps-loader",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "description": "Helpers to dinamically load Google Maps API using RequireJS or JSPM",
   "main": "systemjs-gmaps.js",
   "scripts": {
@@ -34,6 +34,9 @@
   },
   "jspm": {
     "dependencies": {},
-    "devDependencies": {}
+    "devDependencies": {},
+    "peerDependencies": {
+      "jspm-nodelibs-process": "npm:jspm-nodelibs-process@^0.2.0"
+    }
   }
 }

@@ -1,4 +1,7 @@
 SystemJS.config({
+  paths: {
+    "npm:": "jspm_packages/npm/"
+  },
   browserConfig: {
     "baseURL": "/",
     "paths": {
@@ -19,7 +22,12 @@ SystemJS.config({
 });
 
 SystemJS.config({
-  packageConfigPaths: [],
-  map: {},
+  packageConfigPaths: [
+    "npm:@*/*.json",
+    "npm:*.json"
+  ],
+  map: {
+    "jspm-nodelibs-process": "npm:jspm-nodelibs-process@0.2.0"
+  },
   packages: {}
 });
