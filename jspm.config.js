@@ -1,6 +1,7 @@
 SystemJS.config({
   paths: {
-    "npm:": "jspm_packages/npm/"
+    "npm:": "jspm_packages/npm/",
+    "github:": "jspm_packages/github/"
   },
   browserConfig: {
     "baseURL": "/",
@@ -24,10 +25,16 @@ SystemJS.config({
 SystemJS.config({
   packageConfigPaths: [
     "npm:@*/*.json",
-    "npm:*.json"
+    "npm:*.json",
+    "github:*/*.json"
   ],
   map: {
-    "jspm-nodelibs-process": "npm:jspm-nodelibs-process@0.2.0"
+    "assert": "npm:jspm-nodelibs-assert@0.2.0",
+    "fs": "npm:jspm-nodelibs-fs@0.2.0",
+    "jspm-nodelibs-process": "npm:jspm-nodelibs-process@0.2.0",
+    "jspm/nodelibs-process": "github:jspm/nodelibs-process@master",
+    "process": "npm:jspm-nodelibs-process@0.2.0",
+    "vm": "npm:jspm-nodelibs-vm@0.2.0"
   },
   packages: {}
 });
