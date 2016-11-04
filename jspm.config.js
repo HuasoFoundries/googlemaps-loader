@@ -32,7 +32,7 @@ SystemJS.config({
     "assert": "npm:jspm-nodelibs-assert@0.2.0",
     "fs": "npm:jspm-nodelibs-fs@0.2.0",
     "jspm-nodelibs-process": "npm:jspm-nodelibs-process@0.2.0",
-    "jspm/nodelibs-process": "github:jspm/nodelibs-process@master",
+    "jspm/nodelibs-process": "github:jspm/nodelibs-process@0.2.0-alpha",
     "process": "npm:jspm-nodelibs-process@0.2.0",
     "vm": "npm:jspm-nodelibs-vm@0.2.0"
   },

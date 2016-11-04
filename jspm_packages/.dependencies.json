@@ -1,13 +1,9 @@
 {
-  "npm:jspm-nodelibs-fs@0.2.0": {
-    "deps": {},
-    "peerDeps": {}
-  },
   "npm:jspm-nodelibs-vm@0.2.0": {
     "deps": {},
     "peerDeps": {}
   },
-  "npm:jspm-nodelibs-process@0.2.0": {
+  "npm:jspm-nodelibs-fs@0.2.0": {
     "deps": {},
     "peerDeps": {}
   },
@@ -15,7 +11,11 @@
     "deps": {},
     "peerDeps": {}
   },
-  "github:jspm/nodelibs-process@master": {
+  "npm:jspm-nodelibs-process@0.2.0": {
+    "deps": {},
+    "peerDeps": {}
+  },
+  "github:jspm/nodelibs-process@0.2.0-alpha": {
     "deps": {},
     "peerDeps": {}
   }
